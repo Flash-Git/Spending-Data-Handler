@@ -17,11 +17,6 @@ namespace Spending_Data_Handler
             InitializeComponent();
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnAdd_New_Purchase_Click(object sender, EventArgs e)
         {
             spendingForm frm = new spendingForm();

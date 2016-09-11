@@ -36,6 +36,8 @@
             this.ColumnTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnName1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnName2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnName3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnName4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +71,9 @@
             this.ColumnType,
             this.ColumnTotal,
             this.ColumnName1,
-            this.ColumnName2});
+            this.ColumnName2,
+            this.ColumnName3,
+            this.ColumnName4});
             this.dataGridView.Location = new System.Drawing.Point(12, 67);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
@@ -78,7 +82,7 @@
             // 
             // ColumnWeek
             // 
-            this.ColumnWeek.HeaderText = "Week";
+            this.ColumnWeek.HeaderText = "Date";
             this.ColumnWeek.Name = "ColumnWeek";
             this.ColumnWeek.ReadOnly = true;
             // 
@@ -106,6 +110,18 @@
             this.ColumnName2.Name = "ColumnName2";
             this.ColumnName2.ReadOnly = true;
             // 
+            // ColumnName3
+            // 
+            this.ColumnName3.HeaderText = "Name3";
+            this.ColumnName3.Name = "ColumnName3";
+            this.ColumnName3.ReadOnly = true;
+            // 
+            // ColumnName4
+            // 
+            this.ColumnName4.HeaderText = "Name4";
+            this.ColumnName4.Name = "ColumnName4";
+            this.ColumnName4.ReadOnly = true;
+            // 
             // SpendingData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -132,5 +148,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName4;
     }
 }

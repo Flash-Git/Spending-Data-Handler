@@ -19,7 +19,7 @@ namespace Spending_Data_Handler
 
         private void btnAdd_Spending_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void btnReset_Click(object sender, EventArgs e)
