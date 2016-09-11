@@ -16,7 +16,7 @@ namespace Spending_Data_Handler
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new spendingForm());
+            Application.Run(new SpendingData());
         }
     }
 }

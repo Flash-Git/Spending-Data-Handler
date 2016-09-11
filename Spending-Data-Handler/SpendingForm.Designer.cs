@@ -44,7 +44,9 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.lblPayment_Method = new System.Windows.Forms.Label();
             this.txtPayment_Method = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtDate = new System.Windows.Forms.DateTimePicker();
+            this.txtNotes = new System.Windows.Forms.TextBox();
+            this.lblNotes = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtTime
@@ -52,7 +54,7 @@
             this.txtTime.Location = new System.Drawing.Point(488, 259);
             this.txtTime.Name = "txtTime";
             this.txtTime.Size = new System.Drawing.Size(148, 20);
-            this.txtTime.TabIndex = 4;
+            this.txtTime.TabIndex = 6;
             // 
             // lblType
             // 
@@ -86,7 +88,7 @@
             this.txtAmount.Location = new System.Drawing.Point(116, 376);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(191, 20);
-            this.txtAmount.TabIndex = 6;
+            this.txtAmount.TabIndex = 3;
             // 
             // lblAmount
             // 
@@ -99,10 +101,10 @@
             // 
             // btnAdd_Spending
             // 
-            this.btnAdd_Spending.Location = new System.Drawing.Point(382, 371);
+            this.btnAdd_Spending.Location = new System.Drawing.Point(409, 371);
             this.btnAdd_Spending.Name = "btnAdd_Spending";
             this.btnAdd_Spending.Size = new System.Drawing.Size(92, 23);
-            this.btnAdd_Spending.TabIndex = 7;
+            this.btnAdd_Spending.TabIndex = 8;
             this.btnAdd_Spending.Text = "Add Spending";
             this.btnAdd_Spending.UseVisualStyleBackColor = true;
             this.btnAdd_Spending.Click += new System.EventHandler(this.btnAdd_Spending_Click);
@@ -119,7 +121,7 @@
             this.txtType.Location = new System.Drawing.Point(488, 143);
             this.txtType.Name = "txtType";
             this.txtType.Size = new System.Drawing.Size(148, 64);
-            this.txtType.TabIndex = 2;
+            this.txtType.TabIndex = 4;
             // 
             // lblName
             // 
@@ -141,11 +143,11 @@
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(279, 23);
+            this.lblTitle.Location = new System.Drawing.Point(278, 9);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(143, 36);
+            this.lblTitle.Size = new System.Drawing.Size(204, 36);
             this.lblTitle.TabIndex = 15;
-            this.lblTitle.Text = "Spending";
+            this.lblTitle.Text = "Add Purchase";
             // 
             // txtItems
             // 
@@ -154,7 +156,7 @@
             this.txtItems.Multiline = true;
             this.txtItems.Name = "txtItems";
             this.txtItems.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtItems.Size = new System.Drawing.Size(191, 163);
+            this.txtItems.Size = new System.Drawing.Size(191, 106);
             this.txtItems.TabIndex = 1;
             // 
             // lblItems
@@ -168,10 +170,10 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(561, 374);
+            this.btnReset.Location = new System.Drawing.Point(549, 373);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(75, 23);
-            this.btnReset.TabIndex = 8;
+            this.btnReset.TabIndex = 9;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
@@ -195,15 +197,36 @@
             this.txtPayment_Method.Location = new System.Drawing.Point(488, 286);
             this.txtPayment_Method.Name = "txtPayment_Method";
             this.txtPayment_Method.Size = new System.Drawing.Size(148, 21);
-            this.txtPayment_Method.TabIndex = 5;
+            this.txtPayment_Method.TabIndex = 7;
             this.txtPayment_Method.Text = "Cash";
             // 
-            // dateTimePicker1
+            // txtDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(488, 229);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(148, 20);
-            this.dateTimePicker1.TabIndex = 3;
+            this.txtDate.Location = new System.Drawing.Point(488, 229);
+            this.txtDate.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Size = new System.Drawing.Size(148, 20);
+            this.txtDate.TabIndex = 5;
+            this.txtDate.Value = new System.DateTime(2016, 9, 11, 16, 46, 26, 0);
+            // 
+            // txtNotes
+            // 
+            this.txtNotes.AcceptsReturn = true;
+            this.txtNotes.Location = new System.Drawing.Point(116, 264);
+            this.txtNotes.Multiline = true;
+            this.txtNotes.Name = "txtNotes";
+            this.txtNotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtNotes.Size = new System.Drawing.Size(191, 43);
+            this.txtNotes.TabIndex = 2;
+            // 
+            // lblNotes
+            // 
+            this.lblNotes.AutoSize = true;
+            this.lblNotes.Location = new System.Drawing.Point(41, 267);
+            this.lblNotes.Name = "lblNotes";
+            this.lblNotes.Size = new System.Drawing.Size(35, 13);
+            this.lblNotes.TabIndex = 22;
+            this.lblNotes.Text = "Notes";
             // 
             // spendingForm
             // 
@@ -211,7 +234,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(701, 438);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.lblNotes);
+            this.Controls.Add(this.txtNotes);
+            this.Controls.Add(this.txtDate);
             this.Controls.Add(this.txtPayment_Method);
             this.Controls.Add(this.lblPayment_Method);
             this.Controls.Add(this.btnReset);
@@ -229,7 +254,7 @@
             this.Controls.Add(this.lblType);
             this.Controls.Add(this.txtTime);
             this.Name = "spendingForm";
-            this.Text = "Spending";
+            this.Text = "Add Purchase";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,7 +277,9 @@
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Label lblPayment_Method;
         private System.Windows.Forms.ComboBox txtPayment_Method;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker txtDate;
+        private System.Windows.Forms.TextBox txtNotes;
+        private System.Windows.Forms.Label lblNotes;
     }
 }
 
